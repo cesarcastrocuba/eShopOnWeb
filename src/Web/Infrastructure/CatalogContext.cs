@@ -9,6 +9,7 @@ namespace Microsoft.eShopWeb.Infrastructure
     {
         public CatalogContext(DbContextOptions<CatalogContext> options) : base(options)
         {
+            Database.EnsureCreated();
         }
         public DbSet<CatalogItem> CatalogItems { get; set; }
         public DbSet<CatalogBrand> CatalogBrands { get; set; }
